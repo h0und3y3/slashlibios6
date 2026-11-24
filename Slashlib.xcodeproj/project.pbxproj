@@ -1,0 +1,90 @@
+// !$*UTF8*$!
+{ archiveVersion = 1; classes = {}; objectVersion = 46; objects = {
+
+A10000000000000000000070 = {isa = PBXBuildFile; fileRef = A10000000000000000000080; };
+A10000000000000000000071 = {isa = PBXBuildFile; fileRef = A10000000000000000000081; };
+A10000000000000000000072 = {isa = PBXBuildFile; fileRef = A10000000000000000000082; };
+A10000000000000000000073 = {isa = PBXBuildFile; fileRef = A10000000000000000000083; };
+A10000000000000000000074 = {isa = PBXBuildFile; fileRef = A10000000000000000000084; };
+A10000000000000000000080 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLAPI.m; sourceTree = "<group>"; };
+A10000000000000000000081 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLStore.m; sourceTree = "<group>"; };
+A10000000000000000000082 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLDownloadManager.m; sourceTree = "<group>"; };
+A10000000000000000000083 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLSyncService.m; sourceTree = "<group>"; };
+A10000000000000000000084 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLSettingsViewController.m; sourceTree = "<group>"; };
+A10000000000000000000085 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLAPI.h; sourceTree = "<group>"; };
+A10000000000000000000086 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLStore.h; sourceTree = "<group>"; };
+A10000000000000000000087 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLDownloadManager.h; sourceTree = "<group>"; };
+A10000000000000000000088 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLSyncService.h; sourceTree = "<group>"; };
+A10000000000000000000089 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLSettingsViewController.h; sourceTree = "<group>"; };
+
+A10000000000000000000090 = {isa = PBXBuildFile; fileRef = A10000000000000000000092; };
+A10000000000000000000091 = {isa = PBXBuildFile; fileRef = A10000000000000000000094; };
+A10000000000000000000092 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLHomeViewController.m; sourceTree = "<group>"; };
+A10000000000000000000093 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLHomeViewController.h; sourceTree = "<group>"; };
+A10000000000000000000094 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLLibraryViewController.m; sourceTree = "<group>"; };
+A10000000000000000000095 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLLibraryViewController.h; sourceTree = "<group>"; };
+
+000000A10000000000000100 = {isa = PBXBuildFile; fileRef = 000000A10000000000000101; };
+000000A10000000000000101 = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon.png"; sourceTree = "<group>"; };
+000000A10000000000000102 = {isa = PBXBuildFile; fileRef = 000000A10000000000000103; };
+000000A10000000000000103 = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+000000A10000000000000104 = {isa = PBXBuildFile; fileRef = 000000A10000000000000105; };
+000000A10000000000000105 = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+000000A10000000000000106 = {isa = PBXBuildFile; fileRef = 000000A10000000000000107; };
+000000A10000000000000107 = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+000000A10000000000000108 = {isa = PBXBuildFile; fileRef = 000000A10000000000000109; };
+000000A10000000000000109 = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+000000A1000000000000010A = {isa = PBXBuildFile; fileRef = 000000A1000000000000010B; };
+000000A1000000000000010B = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+
+A10000000000000000000110 = {isa = PBXBuildFile; fileRef = A10000000000000000000111; };
+A10000000000000000000111 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLTheme.m; sourceTree = "<group>"; };
+A10000000000000000000112 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLTheme.h; sourceTree = "<group>"; };
+
+A10000000000000000000120 = {isa = PBXBuildFile; fileRef = A10000000000000000000121; };
+A10000000000000000000121 = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+A10000000000000000000122 = {isa = PBXBuildFile; fileRef = A10000000000000000000123; };
+A10000000000000000000123 = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+A10000000000000000000124 = {isa = PBXBuildFile; fileRef = A10000000000000000000125; };
+A10000000000000000000125 = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+
+A10000000000000000000140 = {isa = PBXBuildFile; fileRef = A10000000000000000000141; };
+A10000000000000000000141 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLAuthStore.m; sourceTree = "<group>"; };
+A10000000000000000000142 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLAuthStore.h; sourceTree = "<group>"; };
+A10000000000000000000143 = {isa = PBXBuildFile; fileRef = A10000000000000000000144; };
+A10000000000000000000144 = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+
+A10000000000000000000150 = {isa = PBXBuildFile; fileRef = A10000000000000000000151; };
+A10000000000000000000151 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLImageLoader.m; sourceTree = "<group>"; };
+A10000000000000000000152 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLImageLoader.h; sourceTree = "<group>"; };
+
+A10000000000000000000001 = {isa = PBXBuildFile; fileRef = A10000000000000000000011; };
+A10000000000000000000002 = {isa = PBXBuildFile; fileRef = A10000000000000000000012; };
+A10000000000000000000003 = {isa = PBXBuildFile; fileRef = A10000000000000000000016; };
+A10000000000000000000004 = {isa = PBXBuildFile; fileRef = A10000000000000000000017; };
+A10000000000000000000011 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+A10000000000000000000012 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLAppDelegate.m; sourceTree = "<group>"; };
+A10000000000000000000013 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLAppDelegate.h; sourceTree = "<group>"; };
+A10000000000000000000014 = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+A10000000000000000000016 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLTitleViewController.m; sourceTree = "<group>"; };
+A10000000000000000000017 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLReaderViewController.m; sourceTree = "<group>"; };
+A10000000000000000000018 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLTitleViewController.h; sourceTree = "<group>"; };
+A10000000000000000000019 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLReaderViewController.h; sourceTree = "<group>"; };
+A10000000000000000000015 = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Slashlib.app; sourceTree = BUILT_PRODUCTS_DIR; };
+A10000000000000000000020 = {isa = PBXGroup; children = (A10000000000000000000021, A10000000000000000000022, A10000000000000000000023, A10000000000000000000130); sourceTree = "<group>"; };
+A10000000000000000000021 = {isa = PBXGroup; path = Sources; sourceTree = "<group>"; children = (A10000000000000000000011, A10000000000000000000012, A10000000000000000000013, A10000000000000000000016, A10000000000000000000017, A10000000000000000000018, A10000000000000000000019, A10000000000000000000080, A10000000000000000000081, A10000000000000000000082, A10000000000000000000083, A10000000000000000000084, A10000000000000000000085, A10000000000000000000086, A10000000000000000000087, A10000000000000000000088, A10000000000000000000089, A10000000000000000000092, A10000000000000000000093, A10000000000000000000094, A10000000000000000000095, A10000000000000000000111, A10000000000000000000112, A10000000000000000000141, A10000000000000000000142, A10000000000000000000151, A10000000000000000000152); };
+A10000000000000000000022 = {isa = PBXGroup; path = Resources; sourceTree = "<group>"; children = (A10000000000000000000014, 000000A10000000000000101, 000000A10000000000000103, 000000A10000000000000105, 000000A10000000000000107, 000000A10000000000000109, 000000A1000000000000010B); };
+A10000000000000000000023 = {isa = PBXGroup; name = Products; sourceTree = "<group>"; children = (A10000000000000000000015); };
+A10000000000000000000130 = {isa = PBXGroup; name = Frameworks; sourceTree = "<group>"; children = (A10000000000000000000121, A10000000000000000000123, A10000000000000000000125, A10000000000000000000144); };
+A10000000000000000000030 = {isa = PBXNativeTarget; buildConfigurationList = A10000000000000000000050; buildPhases = (A10000000000000000000040, A10000000000000000000041, A10000000000000000000042); buildRules = (); dependencies = (); name = Slashlib; productName = Slashlib; productReference = A10000000000000000000015; productType = "com.apple.product-type.application"; };
+A10000000000000000000031 = {isa = PBXProject; attributes = {LastUpgradeCheck = 0510; }; buildConfigurationList = A10000000000000000000051; compatibilityVersion = "Xcode 3.2"; developmentRegion = English; hasScannedForEncodings = 0; mainGroup = A10000000000000000000020; productRefGroup = A10000000000000000000023; projectDirPath = ""; projectRoot = ""; targets = (A10000000000000000000030); };
+A10000000000000000000040 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000001, A10000000000000000000002, A10000000000000000000003, A10000000000000000000004, A10000000000000000000070, A10000000000000000000071, A10000000000000000000072, A10000000000000000000073, A10000000000000000000074, A10000000000000000000090, A10000000000000000000091, A10000000000000000000110, A10000000000000000000140, A10000000000000000000150); runOnlyForDeploymentPostprocessing = 0; };
+A10000000000000000000041 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000120, A10000000000000000000122, A10000000000000000000124, A10000000000000000000143); runOnlyForDeploymentPostprocessing = 0; };
+A10000000000000000000042 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (000000A10000000000000100, 000000A10000000000000102, 000000A10000000000000104, 000000A10000000000000106, 000000A10000000000000108, 000000A1000000000000010A); runOnlyForDeploymentPostprocessing = 0; };
+A10000000000000000000060 = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGNING_REQUIRED = NO; CODE_SIGNING_ALLOWED = NO; INFOPLIST_FILE = Resources/Info.plist; PRODUCT_BUNDLE_IDENTIFIER = ru.slashlib.client; PRODUCT_NAME = Slashlib; SDKROOT = iphoneos; TARGETED_DEVICE_FAMILY = "1,2"; IPHONEOS_DEPLOYMENT_TARGET = 6.0; ARCHS = armv7; VALID_ARCHS = armv7; CLANG_ENABLE_OBJC_ARC = NO; CLANG_ENABLE_OBJC_WEAK = NO; OTHER_CFLAGS = "-fblocks"; GCC_C_LANGUAGE_STANDARD = gnu99; }; name = Release; };
+A10000000000000000000061 = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGNING_REQUIRED = NO; CODE_SIGNING_ALLOWED = NO; INFOPLIST_FILE = Resources/Info.plist; PRODUCT_BUNDLE_IDENTIFIER = ru.slashlib.client; PRODUCT_NAME = Slashlib; SDKROOT = iphoneos; TARGETED_DEVICE_FAMILY = "1,2"; IPHONEOS_DEPLOYMENT_TARGET = 6.0; ARCHS = armv7; VALID_ARCHS = armv7; CLANG_ENABLE_OBJC_ARC = NO; CLANG_ENABLE_OBJC_WEAK = NO; OTHER_CFLAGS = "-fblocks"; GCC_C_LANGUAGE_STANDARD = gnu99; }; name = Debug; };
+A10000000000000000000062 = {isa = XCBuildConfiguration; buildSettings = {IPHONEOS_DEPLOYMENT_TARGET = 6.0; SDKROOT = iphoneos; }; name = Release; };
+A10000000000000000000063 = {isa = XCBuildConfiguration; buildSettings = {IPHONEOS_DEPLOYMENT_TARGET = 6.0; SDKROOT = iphoneos; }; name = Debug; };
+A10000000000000000000050 = {isa = XCConfigurationList; buildConfigurations = (A10000000000000000000060, A10000000000000000000061); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+A10000000000000000000051 = {isa = XCConfigurationList; buildConfigurations = (A10000000000000000000062, A10000000000000000000063); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+}; rootObject = A10000000000000000000031; }
