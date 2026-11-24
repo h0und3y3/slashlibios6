@@ -9,7 +9,7 @@ jobs:
   build-ios6:
     # GitHub-hosted macOS images no longer ship an ARMv7-capable legacy Xcode.
     # Register a self-hosted Mac runner with labels: self-hosted, macOS, ios6.
-    runs-on: [self-hosted, macOS, ios6]
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
       - name: Verify legacy Apple toolchain
