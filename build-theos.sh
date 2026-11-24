@@ -19,7 +19,7 @@ mkdir -p build
 rm -f packages/*.ipa packages/*.deb 2>/dev/null || true
 
 make clean
-make package PACKAGE_FORMAT=ipa FINALPACKAGE=1
+make package PACKAGE_FORMAT=ipa FINALPACKAGE=1 ADDITIONAL_OBJCFLAGS=-Wno-error
 IPA="$(find packages -maxdepth 1 -type f -name '*.ipa' -print -quit)"
 [[ -n "$IPA" ]] || { echo "Theos did not create an IPA." >&2; exit 3; }
 cp "$IPA" build/Slashlib-theos-raw.ipa
@@ -44,7 +44,7 @@ rm -f build/Slashlib.ipa
 rm -f build/Slashlib-theos-raw.ipa
 
 make clean
-make package PACKAGE_FORMAT=deb FINALPACKAGE=1
+make package PACKAGE_FORMAT=deb FINALPACKAGE=1 ADDITIONAL_OBJCFLAGS=-Wno-error
 DEB="$(find packages -maxdepth 1 -type f -name '*.deb' -print -quit)"
 [[ -n "$DEB" ]] || { echo "Theos did not create a DEB." >&2; exit 4; }
 cp "$DEB" build/
