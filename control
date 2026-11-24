@@ -1,8 +1,0 @@
-Package: ru.slashlib.client
-Name: Slashlib
-Version: 0.3.0
-Architecture: iphoneos-arm
-Description: Unofficial Slashlib reader for iOS 6
-Maintainer: Slashlib community <noreply@example.invalid>
-Author: Slashlib community
-Section: Applications
