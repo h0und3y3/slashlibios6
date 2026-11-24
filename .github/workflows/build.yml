@@ -1,0 +1,100 @@
+name: Build Slashlib iOS 6 (Theos on Linux)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+    tags: ['v*']
+
+# write is needed only for publishing a tagged GitHub Release.
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 45
+    env:
+      THEOS: ${{ github.workspace }}/.theos
+      CI: '1'
+      DEBIAN_FRONTEND: noninteractive
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Linux dependencies
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          echo "Runner identity: $(id)"
+          if [[ "$(id -u)" == 0 ]]; then
+            echo 'Theos must run as a regular user, not root.' >&2
+            exit 1
+          fi
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            build-essential bash ca-certificates curl dpkg-dev fakeroot file \
+            git libxml2 make perl python3 rsync unzip zip xz-utils
+
+      - name: Install Theos (as runner user)
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          mkdir -p "$(dirname "$THEOS")"
+          curl -fsSL https://raw.githubusercontent.com/theos/theos/master/bin/install-theos \
+            -o "$RUNNER_TEMP/install-theos"
+          # Do not use sudo here: the official installer explicitly rejects root.
+          bash "$RUNNER_TEMP/install-theos"
+          test -f "$THEOS/makefiles/common.mk"
+          test -x "$THEOS/toolchain/linux/iphone/bin/clang"
+          echo "$THEOS/bin" >> "$GITHUB_PATH"
+          echo "THEOS=$THEOS" >> "$GITHUB_ENV"
+
+      - name: Install iPhoneOS 9.3 SDK for Linux toolchain
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          mkdir -p "$THEOS/sdks"
+          if [[ ! -f "$THEOS/sdks/iPhoneOS9.3.sdk/SDKSettings.plist" ]]; then
+            git clone --depth 1 --filter=blob:none --sparse \
+              https://github.com/theos/sdks.git "$RUNNER_TEMP/theos-sdks"
+            git -C "$RUNNER_TEMP/theos-sdks" sparse-checkout set iPhoneOS9.3.sdk
+            test -f "$RUNNER_TEMP/theos-sdks/iPhoneOS9.3.sdk/SDKSettings.plist"
+            rm -rf "$THEOS/sdks/iPhoneOS9.3.sdk"
+            cp -a "$RUNNER_TEMP/theos-sdks/iPhoneOS9.3.sdk" "$THEOS/sdks/"
+          fi
+          test -x "$THEOS/toolchain/linux/iphone/bin/clang"
+          test -f "$THEOS/sdks/iPhoneOS9.3.sdk/SDKSettings.plist"
+          "$THEOS/toolchain/linux/iphone/bin/clang" --version
+
+      - name: Audit source and project configuration
+        shell: bash
+        run: bash scripts/check-build-config.sh
+
+      - name: Compile and package IPA + DEB
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          mkdir -p build
+          bash build-theos.sh 2>&1 | tee build/build.log
+
+      - name: Upload IPA, DEB and build log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Slashlib-iOS6-IPA-DEB
+          path: |
+            build/Slashlib.ipa
+            build/ru.slashlib.client_0.3.0_iphoneos-arm.deb
+            build/build.log
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Attach packages to GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v') && success()
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            build/Slashlib.ipa
+            build/ru.slashlib.client_0.3.0_iphoneos-arm.deb
