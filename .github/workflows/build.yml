@@ -18,10 +18,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Validate project configuration
         run: |
-      chmod +x ./scripts/*.sh
-      ./scripts/check-build-config.sh
+          chmod +x ./scripts/*.sh ./build-theos.sh
+          ./scripts/check-build-config.sh
+
       - name: Install Linux prerequisites
         run: |
           sudo apt-get update
