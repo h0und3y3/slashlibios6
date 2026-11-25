@@ -59,19 +59,18 @@ jobs:
           patch_tbd() {
             local name="$1"
             local path="$SYSLIB/$name.tbd"
-            # Only create if file is absent or has no armv7 arch entry
             if [ ! -f "$path" ] || ! grep -q 'armv7' "$path"; then
-              cat > "$path" << TBDEOF
----
-archs:           [ armv7, armv7s, arm64 ]
-platform:        ios
-install-name:    /usr/lib/system/${name}.dylib
-current-version: 1.0
-exports:
-  - archs:       [ armv7, armv7s, arm64 ]
-    symbols:     [ ]
-...
-TBDEOF
+              printf '%s\n' \
+                '---' \
+                'archs:           [ armv7, armv7s, arm64 ]' \
+                'platform:        ios' \
+                "install-name:    /usr/lib/system/${name}.dylib" \
+                'current-version: 1.0' \
+                'exports:' \
+                '  - archs:       [ armv7, armv7s, arm64 ]' \
+                '    symbols:     [ ]' \
+                '...' \
+                > "$path"
             fi
           }
 
